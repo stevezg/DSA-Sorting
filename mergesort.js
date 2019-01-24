@@ -5,9 +5,10 @@ dataset.forEach((str, i) => {
   dataset[i] = parseInt(str);
 });
 
-console.log(dataset);
-
+//console.log(dataset);
+let count = 0;
 function mergeSort(array) {
+  count++;
   if (array.length <= 1) {
     return array;
   }
@@ -21,6 +22,7 @@ function mergeSort(array) {
   return merge(left, right, array);
 }
 function merge(left, right, array) {
+
   let leftIndex = 0;
   let rightIndex = 0;
   let outputIndex = 0;
@@ -43,3 +45,4 @@ function merge(left, right, array) {
 }
 
 console.log(mergeSort(dataset));
+console.log(count);
